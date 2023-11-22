@@ -20,7 +20,7 @@ import os
 import numpy as np
 
 COMPANY = "Enter the company name"
-NAME = "Company name"
+NAME = "Costumer name"
 SYMPLE = ""
 MODEL = "7B-chat" #the model
 MODEL_PATH = "/Users/abdullahalharthi/Meta_llama/llama.cpp/models/{MODEL}/ggml-model-q4_0.gguf"
