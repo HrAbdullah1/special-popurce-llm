@@ -23,6 +23,7 @@ COMPANY = "Enter the company name"
 NAME = "Company name"
 SYMPLE = ""
 MODEL = "7B-chat" #the model
+MODEL_PATH = "/Users/abdullahalharthi/Meta_llama/llama.cpp/models/{MODEL}/ggml-model-q4_0.gguf"
 persist_directory = f"./VectorDatabase_{SYMPLE}_{MODEL}"
 
 
@@ -44,7 +45,7 @@ def creacting_vectordb(embedding_model):
         
 def set_Chatbot():
 
-    embedding = LlamaCppEmbeddings(model_path=f"/Users/abdullahalharthi/Meta_llama/llama.cpp/models/{MODEL}/ggml-model-q4_0.gguf")
+    embedding = LlamaCppEmbeddings(model_path=MODEL_PATH)
 
     #Init loader
     if not os.path.exists(persist_directory):
@@ -56,7 +57,7 @@ def set_Chatbot():
     callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])
 
     llama_llm = LlamaCpp(
-        model_path=f"/Users/abdullahalharthi/Meta_llama/llama.cpp/models/{MODEL}/ggml-model-q4_0.gguf",
+        model_path=MODEL_PATH,
         temperature=0.2,
         n_gpu_layers=n_gpu_layers,
         n_batch=n_batch,
