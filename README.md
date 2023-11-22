@@ -1,4 +1,4 @@
-# Llama 2 Local Deployment with LangChain as costumer service
+# Llama 2 Local Deployment with LangChain as customer service
 
 Overview
 
